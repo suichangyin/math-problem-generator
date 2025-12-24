@@ -1,0 +1,170 @@
+/* 打印预览基础样式 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* 复制所有相关的打印样式 */
+* {
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+.print-preview-content {
+  padding: 0 !important;
+  margin: 0 !important;
+  background: white !important;
+  height: auto !important;
+}
+
+@media print {
+  @page {
+    margin: 10;
+    size: A4;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* 打印预览窗口样式 */
+.print-preview-content {
+  padding: 0 !important;
+  margin: 0 !important;
+  background: white !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.print-preview-title {
+  font-size: 6mm !important;
+  font-weight: bold;
+  text-align: center;
+  margin: 3mm 0 2mm 0 !important;
+  visibility: visible !important;
+  width: 100% !important;
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 1000 !important;
+  display: block;
+  /* 添加文本截断样式 */
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.print-preview-subtitle {
+  font-size: 5mm !important;
+  text-align: center;
+  margin: 0 0 5mm 0 !important;
+  visibility: visible !important;
+  width: 100% !important;
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 1000 !important;
+  display: block;
+  /* 添加文本截断样式 */
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.print-preview-problems-container {
+  box-shadow: none !important;
+  print-color-adjust: exact !important;
+  -webkit-print-color-adjust: exact !important;
+  
+  /* 使用多列布局，实现类似Word分栏的效果 */
+  display: block !important;
+  column-count: 3 !important;
+  column-gap: 5mm !important;
+  column-fill: auto !important;
+  column-rule: none !important;
+  
+  /* Positioning with proper margins */
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+  margin: 10mm 10mm 15mm 10mm !important;
+  padding: 0 !important;
+  
+  /* Size */
+  width: calc(100vw - 10mm) !important;
+  max-width: calc(100vw - 10mm) !important;
+  height: auto !important;
+  max-height: none !important;
+  box-sizing: border-box !important;
+}
+
+.print-preview-problem-item {
+  break-inside: avoid !important;
+  page-break-inside: avoid !important;
+  font-size: 5mm !important;
+  padding: 1.2mm 0 !important;
+  margin: 2mm !important;
+  line-height: 1.2 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.print-preview-problem-word-item {
+  break-inside: avoid !important;
+  page-break-inside: avoid !important;
+  font-size: 5mm !important;
+  padding: 1.2mm 0 !important;
+  margin: 2mm 0 !important;
+  line-height: 1.2 !important;
+  display: block !important;
+  column-span: all !important;
+  width: 100% !important;
+}
+
+.print-preview-problem-type-header {
+  font-weight: bold !important;
+  break-inside: avoid !important;
+  page-break-inside: avoid !important;
+  font-size: 5mm !important;
+  margin: 2mm 0 1mm 0 !important;
+  padding: 0.8mm 0 !important;
+  border-bottom: 0.5pt solid #333 !important;
+  /* 添加下划线样式 */
+}
+
+.print-preview-problem-number {
+  margin-right: 2mm !important;
+  flex-shrink: 0 !important;
+}
+
+.print-preview-problem-text {
+  flex-grow: 1 !important;
+}
+
+.print-preview-problems-container, 
+.print-preview-problems-container *, 
+.print-preview-problem-item,
+.print-preview-problem-number,
+.print-preview-problem-text,
+.print-preview-title,
+.print-preview-subtitle,
+.print-preview-problem-word-item,
+.print-preview-problem-type-header {
+  visibility: visible !important;
+}
