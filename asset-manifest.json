@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/math-problem-generator/static/css/main.ece086ec.css",
-    "main.js": "/math-problem-generator/static/js/main.ce125b63.js",
+    "main.js": "/math-problem-generator/static/js/main.f0dac6b4.js",
     "static/js/453.964ff6c3.chunk.js": "/math-problem-generator/static/js/453.964ff6c3.chunk.js",
     "index.html": "/math-problem-generator/index.html",
     "main.ece086ec.css.map": "/math-problem-generator/static/css/main.ece086ec.css.map",
-    "main.ce125b63.js.map": "/math-problem-generator/static/js/main.ce125b63.js.map",
+    "main.f0dac6b4.js.map": "/math-problem-generator/static/js/main.f0dac6b4.js.map",
     "453.964ff6c3.chunk.js.map": "/math-problem-generator/static/js/453.964ff6c3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ece086ec.css",
-    "static/js/main.ce125b63.js"
+    "static/js/main.f0dac6b4.js"
   ]
 }
